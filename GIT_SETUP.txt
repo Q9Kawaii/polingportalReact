@@ -1,0 +1,49 @@
+# 1. Initialize a new Git repository
+git init  
+
+# 2. Add all files to the staging area
+git add .  
+
+# 3. Commit the changes with a message
+git commit -m "Initial commit"  
+
+# 4. Set the default branch to 'main' (optional but recommended)
+git branch -M main  
+
+# 5. Add the remote repository URL
+git remote add origin <your-repo-url>  
+
+# 6. Push the initial commit to the remote repository
+git push -u origin main  
+
+if some shit happens, [ git pull origin main --rebase ] type this then [ git push -u origin main ]
+
+
+
+
+--------------------------------------------------------
+
+
+
+to create this text file, 
+
+
+create a "GIT_SETUP.txt" in [ a random file path ], with all the stuff u wanna display in that txt file.
+
+
+type this command in the powershell (as administrator) [ notepad $PROFILE ].
+If any unusual appears, type [ New-Item -Path $PROFILE -ItemType File -Force ].
+Type this command in the opened notepad 
+
+[
+function add_git_hehe { 
+    Copy-Item " [ a random file path ] " . 
+    code GIT_SETUP.txt
+}
+Set-Alias -Name add-git-hehe -Value add_git_hehe
+]
+
+save the notepad, run [ . $PROFILE ] in powershell.
+its done !!
+
+now u can run [ add-git-hehe ]. 
